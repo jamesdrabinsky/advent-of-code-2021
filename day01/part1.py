@@ -51,7 +51,7 @@ In this example, there are 7 measurements that are larger than the previous meas
 How many measurements are larger than the previous measurement?
 '''
 
-fp = 'day00/input.txt'
+fp = 'day01/input.txt'
 with open(fp) as report:
     lines = [int(line.strip()) for line in report.readlines()]
 sum(1 if lines[n] > lines[n-1] else 0 for n in range(1, len(lines)))
