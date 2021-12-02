@@ -54,4 +54,4 @@ How many measurements are larger than the previous measurement?
 fp = 'day01/input.txt'
 with open(fp) as report:
     lines = [int(line.strip()) for line in report.readlines()]
-sum(1 if lines[n] > lines[n-1] else 0 for n in range(1, len(lines)))
+sum(lines[n] > lines[n-1] for n in range(1, len(lines)))

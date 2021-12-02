@@ -42,4 +42,4 @@ fp = 'day01/input.txt'
 with open(fp) as report:
     lines = [int(line.strip()) for line in report.readlines()]
 sliding_window = [lines[n:n+3] for n in range(len(lines[:-2]))]
-sum(1 if sum(sliding_window[n]) > sum(sliding_window[n-1]) else 0 for n in range(len(sliding_window)))
+sum(sum(sliding_window[n]) > sum(sliding_window[n-1]) for n in range(len(sliding_window)))
